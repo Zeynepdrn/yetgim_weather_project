@@ -1,101 +1,87 @@
-🌤️ Weather Data Analytics – Python ile Hava Durumu Analizi
+# 🌤️ Weather Data Analytics – Python ile Hava Durumu Analizi
 
 Bu proje, farklı şehirlerden toplanan hava durumu verilerini Python kullanarak analiz etmeyi amaçlamaktadır. Pandas ve NumPy kütüphaneleri yardımıyla veri keşfi, filtreleme, sıralama, gruplama ve temel istatistiksel hesaplamalar adım adım uygulanmıştır.
 
 Çalışma, veri analitiğine giriş seviyesinde yapılabilecek işlemleri kapsayarak hem öğrenme hem de pratik yapma odaklı olarak hazırlanmıştır.
 
-📌 Projede Yapılanlar
+---
 
-🔧 1. Temel Kurulum ve Veri Yükleme
+## 📌 Projede Yapılanlar
 
-Pandas ve NumPy projeye dahil edildi
 
-weather_data.csv DataFrame’e aktarıldı
+## 🔧 1. Temel Kurulum ve Veri Yükleme
+- Pandas ve NumPy projeye dahil edildi  
+- `weather_data.csv` DataFrame’e aktarıldı  
 
-🔍 2. Veri Keşfi
+---
 
+## 🔍 2. Veri Keşfi
 Veri seti üzerinde ilk kontrol adımları gerçekleştirildi:
 
-İlk ve son satırların incelenmesi (head(), tail())
+- İlk ve son satırların incelenmesi (`head()`, `tail()`)  
+- Sayısal sütunlara ait özet istatistiklerin görüntülenmesi (`describe()`)  
 
-Sayısal sütunlara ait özet istatistiklerin görüntülenmesi (describe())
+---
 
+## 🧩 3. Sütunlarla Çalışma
+- Date, City, Temperature sütunları seçilerek yeni bir görünüm oluşturuldu  
+- City–Temperature ikilileri birlikte listelendi  
 
-🧩 3. Sütunlarla Çalışma
+---
 
-Date, City, Temperature sütunları seçilerek yeni bir görünüm oluşturuldu
-
-City–Temperature ikilileri birlikte listelendi
-
-🔎 4. Basit Filtreleme İşlemleri
-
+## 🔎 4. Basit Filtreleme İşlemleri
 Veri belirli koşullara göre süzülerek farklı alt kümeler oluşturuldu:
 
-30°C üzerindeki sıcaklık değerleri
+- 30°C üzerindeki sıcaklık değerleri  
+- Sadece Bursa şehrine ait kayıtlar  
 
-Sadece Bursa şehrine ait kayıtlar
+---
 
-🧠 5. Mantıksal Operatörlerle Gelişmiş Filtreleme
-
+## 🧠 5. Mantıksal Operatörlerle Gelişmiş Filtreleme
 Birden fazla koşul bir arada kullanılarak daha detaylı sorgular oluşturuldu:
 
-İstanbul AND Humidity > 60
+- İstanbul **AND** Humidity > 60  
+- Ankara **OR** Temperature < 5  
+- Temperature < 10 **OR** Humidity > 70  
 
-Ankara OR Temperature < 5
+---
 
-Temperature < 10 OR Humidity > 70
-
-📊 6. Sıralama (Sorting)
-
+## 📊 6. Sıralama (Sorting)
 Veriler farklı sütunlara göre yeniden sıralandı:
 
-Sıcaklığa göre azalan sıralama
+- Sıcaklığa göre azalan sıralama  
+- Neme göre azalan sıralama  
+- Şehir isimlerine göre alfabetik sıralama  
 
-Neme göre azalan sıralama
+---
 
-Şehir isimlerine göre alfabetik sıralama
-
-➕ 7. Yeni Sütun Oluşturma
-
+## ➕ 7. Yeni Sütun Oluşturma
 Veri setine iki yeni özellik eklendi:
 
-Temperature_F → Fahrenheit sıcaklık
+- **Temperature_F** → Fahrenheit sıcaklık  
+- **FeelsLike** → Hissedilen sıcaklık  
 
-FeelsLike → Hissedilen sıcaklık
+---
 
-Bu yeni sütunlar, sıcaklık verisini farklı ölçeklerde görmeyi ve nem etkisini yorumlamayı sağladı.
-
-📚 8. Gruplama ve Analiz
-
+## 📚 8. Gruplama ve Analiz
 Veriler şehir bazında gruplanarak anlamlı özet tablolar çıkarıldı:
 
-Her şehrin kaç kayıt içerdiği
+- Her şehrin kaç kayıt içerdiği  
+- Ortalama sıcaklık değerleri  
 
-Ortalama sıcaklık değerleri
+---
 
-Bu aşamada şehirlerin hava durumu profilleri daha net görünür hale geldi.
+## 🏆 9. En Yüksek/Düşük Değer Analizi
+- En yüksek sıcaklık değerine sahip satır  
+- En düşük nem oranına sahip satır  
 
-🏆 9. En Yüksek/Düşük Değer Analizi
+---
 
-En yüksek sıcaklık değerine sahip satır
+## 💾 10. Dışa Aktarma
+Şehirlere göre hazırlanan ortalama sıcaklık tablosu **`sehir_sicakliklari.xlsx`** dosyasına aktarıldı.
 
-En düşük nem oranına sahip satır
+---
 
-Bu analiz, uç değerleri anlamaya yönelik gerçekleştirildi.
-
-💾 10. Dışa Aktarma
-
-Şehirlere göre hazırlanan ortalama sıcaklık tablosu sehir_sicakliklari.xlsx dosyasına aktarıldı.
-Dosya aşağıdaki bilgileri içeriyor:
-
-Ortalama sıcaklık
-
-Minimum–maksimum sıcaklık
-
-Toplam kayıt sayısı
-
-
-📦 Kullanılan Kütüphaneler
-
+## 📦 Kullanılan Kütüphaneler
 pandas          
-numpy           
+numpy       
